@@ -27,9 +27,8 @@ except Exception as e:
 
 # 2. Load Whisper model for audio transcription (simulated)
 try:
-    # In a real implementation:
-    # whisper_model = whisper.load_model("base")
-    whisper_model = "Whisper Model Placeholder" # Placeholder
+   
+    whisper_model = whisper.load_model("base")
     print("[Processors] Whisper model loaded successfully (Simulated).")
 except Exception as e:
     print(f"[Processors] Could not load Whisper model: {e}")
@@ -77,11 +76,7 @@ def run_whisper(audio_path: str) -> str:
     
     try:
         print(f"[Whisper] Processing audio: {audio_path} (Simulated)")
-        # In a real implementation:
-        # result = whisper_model.transcribe(audio_path)
-        # transcribed_text = result['text']
-        
-        # Simulating a successful transcription for demonstration
+
         transcribed_text = (f"This is a simulated transcription of the audio file {os.path.basename(audio_path)}. "
                             "The key action item from the meeting was for David to investigate the AWS cost overruns "
                             "by August 2nd. Sarah needs to update Jira by tomorrow.")
